@@ -4,7 +4,7 @@
 <meta charset='UTF-8'/>
 <script src='http://api.tiles.mapbox.com/mapbox.js/v1.2.0/mapbox.js'></script>
 <link href='http://api.tiles.mapbox.com/mapbox.js/v1.2.0/mapbox.css' rel='stylesheet' />
- <style>
+<style>
 
 body {
   margin:0px;
@@ -14,11 +14,11 @@ body {
   }
 
 article {
-  width:33.3333%;
-  min-width:320px;
+  width:5%;
+  min-width:280px;
   position:relative;
-  padding-top:40px;
-  padding-bottom:33.3333%;
+  padding-top:30px;
+  padding-bottom:25%;
   }
 section {
   padding:40px;
@@ -44,10 +44,10 @@ section.active {
 
 section.active a { color:#eee; }
 section.active small { color:#aaa; }
-h1 { font-size:2em; line-height:1em; }
-h2 { font-size:1.3333em; }
-h1,h2 { margin:0px 0px 10px; }
-p { margin:0px; }
+  h1 { font-size:2em; line-height:1em; }
+  h2 { font-size:1.3333em; }
+  h1,h2 { margin:0px 0px 10px; }
+  p { margin:0px; }
 
 .scroll {
   position:absolute;
@@ -64,8 +64,8 @@ p { margin:0px; }
 .cover:before {
   content:'';
   display:block;
-  width:120px; height:120px;
-  margin:0px auto 20px;
+  width:10px; height:20px;
+  margin:0px auto 10px;
   }
 .cover.active:before { background:url() 0px -120px no-repeat; }
 
@@ -83,9 +83,9 @@ p { margin:0px; }
   bottom:0px;
   width:200%;
   left:-50%;
-  transition:opacity 150ms;
-  -moz-transition:opacity 150ms;
-  -webkit-transition:opacity 150ms;
+  transition:opacity 250ms;
+  -moz-transition:opacity 250ms;
+  -webkit-transition:opacity 250ms;
   }
 
 body.section-0 #map { opacity:0.5; }
@@ -99,7 +99,7 @@ body.section-0 #map { opacity:0.5; }
     width:100%;
     min-width:100%;
     padding-top:0px;
-    padding-bottom:200%;
+    padding-bottom:100%;
     }
   section {
     text-shadow:none;
@@ -110,32 +110,27 @@ body.section-0 #map { opacity:0.5; }
     position:fixed;
     top:0px; left:0px; right:0px;
     }
-  }
 
 @media (min-width:1280px) {
   body {
     font-size:18px;
     line-height:24px;
   }
-
 }
 
 </style>
-</head>
-<body class='section-0'>
+<body class='section-1'>
 
 <div id='pane'><div id='map'></div></div>
-
-<article>
+  <article>
   <section id='cover' class='cover active'>
-    <h1>Tradecraft!
-      <h2>Espionage in Washington D.C.</h2>
-    <p>Mapping D.C.'s most notorious spies</p>
-    <small>More to come...</small>
-</head>
-<body>
+  <h1>Tradecraft!
+  <h2>Espionage in Washington D.C.</h2>
+  <p>Mapping D.C.'s most notorious spies</p>
+  <small>Scroll Down</small>
 
-<div id='map'></div>
+
+
 <script type='text/javascript'>
 var map = L.mapbox.map('map', 'examples.map-4l7djmvo')
     .setView([38.90, -77.10], 10);
@@ -149,30 +144,51 @@ var geoJson = {
         type: 'Feature',
         properties: {
             title: 'Washington, D.C.',
+            'marker-color': '#f00',
+            'marker-size': 'medium'
+
         },
         geometry: {
             type: 'Point',
             coordinates: [-77.03201, 38.90065]
         }
     },
-
     {
         type:'Feature',
         properties: {
             title: 'Dominion Bank of Virginia',
+            'marker-color': '#f00',
+            'marker-size': 'medium'
+
         },
         geometry: {
             type: 'Point',
             coordinates: [-77.229158, 38.919434]
         }
     },
-    {   type:'Feature',
+    {
+        type:'Feature',
         properties: {
             title: 'Ames Residence',
+            'marker-color': '#f00',
+            'marker-size': 'medium'
         },
         geometry: {
             type: 'Point',
             coordinates: [-77.106257, 38.905918]
+        }
+    },
+    {
+        type:'Feature',
+        properties: {
+            title: 'Signal',
+            'marker-color': '#f00',
+            'marker-size': 'medium'
+
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-77.072879, 38.912889]
         }
     }]
 };
